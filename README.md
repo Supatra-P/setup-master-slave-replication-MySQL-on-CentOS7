@@ -194,4 +194,5 @@ result:
 ```MariaDB [(none)]> stop slave``` (optional)
 
 
+
 ### Finished to connect master slave. they can apply separate db or mix together depend on deployment of other system.
