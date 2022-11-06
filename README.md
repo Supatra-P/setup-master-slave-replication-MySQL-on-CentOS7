@@ -142,7 +142,7 @@ slave: 192.168.100.130 ]
 
 8. edit MySQL configuration file
 
-```[root@localhost mas] # vi /etc/my.cnf```
+```[root@localhost sv] # vi /etc/my.cnf```
 
 on macOS
 - opt+s = insert state
@@ -164,14 +164,16 @@ restart mariadb
 
 9. change to master...
 
-```[root@localhost mas] # mysql -u root -p```
+```[root@localhost sv] # mysql -u root -p```
 
-```MariaDB [(none)]> change to master
+```
+MariaDB [(none)]> change to master
 ->master_host='192.168.100.129',
 ->master_user='repl',
 ->master_password='repl'.
 ->master_log_file='mysql-bin.000001',
-->master_log_pos=245;```
+->master_log_pos=245;
+```
 
 ```MariaDB [(none)]> start slave;```
 
@@ -180,9 +182,13 @@ restart mariadb
 ```MariaDB [(none)]> show slave status\G;```
 
 result:
+
 -Slave_IO_State: Waiting for master to send event
+
 -Slave_IO_Running: Yes
+
 -Slave_SQL_Running: Yes
+
 -no errors
 
 ```MariaDB [(none)]> stop slave``` (optional)
