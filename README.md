@@ -3,7 +3,7 @@
 
 ![masterslave-diagram](https://user-images.githubusercontent.com/78303835/200170582-e721e699-d753-465a-b55f-0a9a213d1c6b.jpg)
 
-picture: [Master Slave Diagram and MVC Diagram]
+descriptions: [Master Slave Diagram and MVC Diagram]
 
 ## Prerequisites
 1. two VM (virtual Machine) with root access
